@@ -1,0 +1,25 @@
+/* src/components/Home/Home.css */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+  
+  .home-title {
+    font-size: 7rem;
+    color: #e0dada;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+
+.home-description {
+    font-size: 1.4rem;
+    color: #e0dada;
+    max-width: 600px;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 60px;
+  }

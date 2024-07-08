@@ -1,0 +1,35 @@
+/* src/components/Navbar.css */
+.navbar {
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: #dc8010;
+    text-decoration: none;
+    font-weight: 30;
+    width: 30px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100px;
+}
+
+

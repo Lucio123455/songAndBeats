@@ -1,0 +1,51 @@
+.destacado {
+    position: relative;
+    width: 100%;
+    height: 800px; /* Altura deseada para la sección destacada */
+    overflow: hidden;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-overlay {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.section-title {
+    position: relative;
+    top: 170px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-sub-title {
+    margin-top: 50px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-size: 1.5rem;
+}
+
+.barra-reproductor {
+    position: relative; 
+    top: 82.5%;
+    width: 100%; /* Asegura que ocupa todo el ancho */
+    z-index: 1000; /* Asegura que está por encima de otros elementos */
+
+
+}
