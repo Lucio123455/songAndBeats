@@ -1,4 +1,3 @@
-// src/components/Navitem/Navitem.jsx
 import React from 'react';
 import './Navitem.css';
 

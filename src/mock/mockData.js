@@ -6,7 +6,7 @@ import NuncaMeOlvidesImg from '../assets/NuncaMeOlvidesImg.jpg'
 import AquellaNocheSoleadaImg from '../assets/AquellaNocheSoleadaImg.jpg'
 import DondeVoyImg from '../assets/DondeVoyImg.jpg'
 import SeFueImg from '../assets/SeFueImg.jpg'
-import DondeEstasAudio from '../assets/DondeEstas.mp3'; // Ejemplo de importación de audio
+import DondeEstasAudio from '../assets/DondeEstas.mp3'; 
 import EntreTuYYoAudio from '../assets/EntreTuYYo.mp3';
 import NuncaMeOlvidesAudio from '../assets/NuncaMeOlvides.mp3'
 import AquellaNocheSoleadaAudio from '../assets/AquellaNocheSoleada.mp3'

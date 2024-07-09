@@ -1,4 +1,4 @@
-/* src/components/Navitem/Navitem.css */
+
 .nav-link {
     position: relative;
     font-size: 28px;
@@ -13,10 +13,10 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 0; /* Cambiado de 100% a 0 para la animación */
+    width: 0; 
     height: 2px;
     background: #fff;
-    transition: width 0.3s ease; /* Añadido ease para una transición suave */
+    transition: width 0.3s ease; 
 }
 
 .nav-link:hover::before {

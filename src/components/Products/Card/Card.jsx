@@ -24,9 +24,15 @@ const Card = ({ image, title, description, audioUrl }) => {
                 </div>
                 <div className="card-back">
                     <p>{description}</p>
-                    <div className="play-button" onClick={togglePlay}>
-                        {isPlaying ? 'Pause' : 'Play'}
+                    <div className='buttons'>
+                        <div className="play-button" onClick={togglePlay}>
+                            {isPlaying ? 'Pause' : 'Play'}
+                        </div>
+                        <div className="add-to-cart" >
+                            Agregar
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
