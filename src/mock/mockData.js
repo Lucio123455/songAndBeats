@@ -56,7 +56,7 @@ export const instrumentales = [
     name: 'Donde voy',
     description: 'Un ritmo pegajoso que combina la fuerza del hip hop con melodías suaves y emotivas. Este beat es ideal para canciones que hablen sobre el amor, la pasión y las experiencias que nos marcan profundamente, con una base rítmica sólida y detalles melódicos que tocan el alma.',
     image: SeFueImg,
-    audioUrl: DondeEstasAudio
+    audioUrl: AquellaNocheSoleadaAudio
   },
   
 ];
