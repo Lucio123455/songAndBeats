@@ -10,7 +10,7 @@ import DondeEstasAudio from '../assets/DondeEstas.mp3';
 import EntreTuYYoAudio from '../assets/EntreTuYYo.mp3';
 import NuncaMeOlvidesAudio from '../assets/NuncaMeOlvides.mp3'
 import AquellaNocheSoleadaAudio from '../assets/AquellaNocheSoleada.mp3'
-
+import LoQueQueriaAudio from '../assets/LoQueQueria.mp3'
 
 
 export const instrumentales = [
@@ -49,7 +49,7 @@ export const instrumentales = [
     name: 'Se fue',
     description: 'Un instrumental melódico perfecto para las reflexiones nocturnas y momentos de tranquilidad. Sus suaves acordes y sutiles toques de sintetizador crean una atmósfera introspectiva, ideal para temas sobre sueños, esperanzas y pensamientos profundos bajo la luz de la luna.',
     image: DondeVoyImg,
-    audioUrl: DondeEstasAudio
+    audioUrl: LoQueQueriaAudio
   },
   {
     id: 6,
@@ -58,6 +58,14 @@ export const instrumentales = [
     image: SeFueImg,
     audioUrl: AquellaNocheSoleadaAudio
   },
+  {
+    id: 7,
+    name: 'Donde voy',
+    description: 'Un ritmo pegajoso que combina la fuerza del hip hop con melodías suaves y emotivas. Este beat es ideal para canciones que hablen sobre el amor, la pasión y las experiencias que nos marcan profundamente, con una base rítmica sólida y detalles melódicos que tocan el alma.',
+    image: SeFueImg,
+    audioUrl: AquellaNocheSoleadaAudio
+  }
+  
   
 ];
 
