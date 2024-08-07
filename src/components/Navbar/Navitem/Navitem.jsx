@@ -1,12 +1,22 @@
-import React from 'react';
+// src/components/Navitem/Navitem.jsx
+import React, { useState, useEffect } from 'react';
+import { NavLink } from "react-router-dom";
 import './Navitem.css';
 
-const Navitem = (props) => {
-    return (
-        <li className="nav-item">
-            <a href="#" className="nav-link"> {props.name} </a>
-        </li>
-    );
+
+const Navitem = ({ categoria }) => {
+  
+
+  return (
+    <>
+      
+        <NavLink to={`/${categoria.toLowerCase()}`} className="nav-link">
+          {categoria}
+        </NavLink>
+      
+    </>
+  );
 }
 
 export default Navitem;
+

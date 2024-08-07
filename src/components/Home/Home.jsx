@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 
 const Home = () => {
+    
     return (
         <div className="home">
             <h1 className='home-title'>Beats And Songs</h1>

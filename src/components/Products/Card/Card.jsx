@@ -1,7 +1,9 @@
+// src/components/Card/Card.jsx
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './Card.css';
 
-const Card = ({ image, title, description, audioUrl }) => {
+const Card = ({ id, image, title, description, audioUrl }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef(new Audio(audioUrl));
 
@@ -28,11 +30,10 @@ const Card = ({ image, title, description, audioUrl }) => {
                         <div className="play-button" onClick={togglePlay}>
                             {isPlaying ? 'Pause' : 'Play'}
                         </div>
-                        <div className="add-to-cart" >
-                            Agregar
-                        </div>
+                        <Link to={`/card/${id}`} className="add-to-cart">
+                            Ver detalles
+                        </Link>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -40,6 +41,7 @@ const Card = ({ image, title, description, audioUrl }) => {
 };
 
 export default Card;
+
 
 
 

@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import Card from './Card/Card.jsx';
 import { instrumentales } from '../../mock/mockData.js';
 import './Products.css';
+import Spinner from '../Spinner/Spinner.jsx';
+
 
 const Products = () => {
+  
   const [visibleCount, setVisibleCount] = useState(6);
 
   const handleShowMore = () => {
@@ -15,6 +18,7 @@ const Products = () => {
       <div className="products">
         {instrumentales.slice(0, visibleCount).map((instrumental) => (
           <Card 
+            id={instrumental.id}
             key={instrumental.id}
             image={instrumental.image}
             title={instrumental.name}

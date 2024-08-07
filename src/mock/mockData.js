@@ -1,4 +1,5 @@
-export const categorias = ["home", "beats", "destacado", "contacto"];
+// src/mock/mockData.js
+export const categorias = ['Home', 'Products', 'Destacado'];
 
 import DondesEstasImg from '../assets/DondeEstasImg.jpg'
 import EntreTuYYoImg from '../assets/EntreTuYYoImg.jpg'
@@ -65,8 +66,6 @@ export const instrumentales = [
     image: SeFueImg,
     audioUrl: AquellaNocheSoleadaAudio
   }
-  
-  
 ];
 
 export const socialMedia = [
