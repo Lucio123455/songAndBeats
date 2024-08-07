@@ -1,6 +1,6 @@
 import React from 'react';
 import './Destacado.css';
-import DestacadoVideo from '../../assets/DestacadoUno.mp4'; // Asegúrate de tener la ruta correcta
+import DestacadoVideo from '../../assets/DestacadoUno.mp4'; 
 import TituloEfecto from './TituloEfecto/TituloEfecto.jsx'
 import BarraReproductor from './BarraReproductor/BarraReproductor.jsx';
 import {  instrumentales } from '../../mock/mockData.js';
