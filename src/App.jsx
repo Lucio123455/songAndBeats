@@ -11,6 +11,8 @@ import CardDetail from './components/Products/Card/CardDetail/CardDetail.jsx';
 
 import './App.css';
 
+{/*hola*/}
+
 const App = () => {
   const [loading, setLoading] = useState(true);
 
