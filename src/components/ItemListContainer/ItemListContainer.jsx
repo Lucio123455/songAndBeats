@@ -5,7 +5,7 @@ import './Products.css';
 import Spinner from '../Spinner/Spinner.jsx';
 
 
-const Products = () => {
+const ItemListContainer = () => {
   
   const [visibleCount, setVisibleCount] = useState(6);
 
@@ -36,5 +36,5 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default ItemListContainer;
 
