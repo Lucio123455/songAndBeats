@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Card from './Card/Card.jsx';
 import { instrumentales } from '../../mock/mockData.js';
 import './Products.css';
-import Spinner from '../Spinner/Spinner.jsx';
-
 
 const ItemListContainer = () => {
   

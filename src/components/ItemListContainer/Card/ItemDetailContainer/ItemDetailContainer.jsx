@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { instrumentales } from '../../../../mock/mockData.js';
 import './CardDetail.css'
 
-const CardDetail = () => {
+const ItemDetailContainer = () => {
   const { id } = useParams();
   const instrumental = instrumentales.find(item => item.id === parseInt(id));
 
@@ -18,4 +18,4 @@ const CardDetail = () => {
   );
 };
 
-export default CardDetail;
+export default ItemDetailContainer;
