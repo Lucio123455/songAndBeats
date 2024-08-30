@@ -1,11 +1,9 @@
 /* src/components/Spinner/Spinner.css */
 .spinner-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    top: 50%;
-    bottom: 50%;
-    
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: 50%;
+  bottom: 50%;
+}

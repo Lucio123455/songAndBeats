@@ -1,38 +1,70 @@
-import React, { useState } from 'react';
-import Card from './Card/Card.jsx';
-import { instrumentales } from '../../mock/mockData.js';
-import './Products.css';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { db } from '../../firebase/dbConnection.js';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import Spinner from '../Spinner/Spinner.jsx';
+import ItemList from '../ItemList/ItemList';
+import './ItemListContainer.css'
+import AddBeatForm from '../AddBeatForm/AddBeatForm.jsx';
+import Destacado from '../Destacado/Destacado.jsx';
 
 const ItemListContainer = () => {
-  
-  const [visibleCount, setVisibleCount] = useState(6);
+  const [products, setProducts] = useState([]);
+  const { categoryId } = useParams();
+  const [loading, setLoading] = useState(true);
 
-  const handleShowMore = () => {
-    setVisibleCount(prevCount => prevCount + 6);
-  };
+  useEffect(() => {
+    setLoading(true);
+    const productsCollection = collection(db, "productos");
+
+    const q = categoryId 
+      ? query(productsCollection, where('category', '==', categoryId))
+      : productsCollection;
+
+    getDocs(q).then(({ docs }) => {
+      const prodFromDocs = docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setProducts(prodFromDocs);
+      setLoading(false);
+    }).catch((error) => {
+      console.error("ERROR", error);
+      setLoading(false);
+    });
+  }, [categoryId]);
+
+  const titleToShow = categoryId ? `Category: ${categoryId}` : "All Products";
 
   return (
-    <div className="products-container">
-      <div className="products">
-        {instrumentales.slice(0, visibleCount).map((instrumental) => (
-          <Card 
-            id={instrumental.id}
-            key={instrumental.id}
-            image={instrumental.image}
-            title={instrumental.name}
-            description={instrumental.description}
-            audioUrl={instrumental.audioUrl}
-          />
-        ))}
+    <main>
+      <div className="container"> 
+        {loading 
+          ? (
+            <div className="spinner-container">
+              <Spinner />
+            </div>
+          ) 
+          : (
+            <div className="product-list">
+              <ItemList products={products} />
+            </div>
+          ) 
+        }
+        <div>
+        <Destacado />
+        </div>
+        <div className="form-container">
+          <AddBeatForm />
+        </div>
       </div>
-      {visibleCount < instrumentales.length && (
-        <button className="show-more-button" onClick={handleShowMore}>
-          Ver más
-        </button>
-      )}
-    </div>
+    </main>
   );
 };
 
 export default ItemListContainer;
+
+
+
+
 

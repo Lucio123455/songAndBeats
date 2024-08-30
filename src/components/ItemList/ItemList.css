@@ -1,0 +1,14 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 16px; 
+    justify-content: space-between; 
+  }
+  
+  .item-card {
+    box-sizing: border-box; 
+    margin-bottom: 16px; 
+  }
+  
+
+  

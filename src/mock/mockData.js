@@ -1,5 +1,5 @@
 // src/mock/mockData.js
-export const categorias = ['Home', 'Products', 'Destacado'];
+export const categorias = ['Home', 'Products'];
 
 import DondesEstasImg from '../assets/DondeEstasImg.jpg'
 import EntreTuYYoImg from '../assets/EntreTuYYoImg.jpg'

@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './BarraReproductor.css';
 
-const BarraReproductor = ({ song }) => {
+const BarraReproductor = ({ name, image, audioUrl }) => {
     const [isPlaying, setIsPlaying] = useState(false);
-    const audioRef = useRef(new Audio(song.audioUrl));
+    const audioRef = useRef(new Audio(audioUrl));
 
     const togglePlay = () => {
         const audio = audioRef.current;
@@ -21,18 +21,17 @@ const BarraReproductor = ({ song }) => {
             audio.pause();
             audio.currentTime = 0;
         };
-    }, [song.audioUrl]);
+    }, [audioUrl]);
 
     return (
         <div className="music-player">
             <div className="song-bar">
                 <div className="song-infos">
                     <div className="image-container">
-                        <img src={song.image} alt={song.name} />
+                        <img src={image} alt={name} />
                     </div>
                     <div className="song-description">
-                        <p className="title">{song.name}</p>
-                        <p className="artist">{song.compositor}</p>
+                        <p className="title">{name}</p>
                     </div>
                 </div>
                 <div className="icons">
@@ -53,7 +52,7 @@ const BarraReproductor = ({ song }) => {
                     <div className="progress-bar">
                         <div className="progress"></div>
                     </div>
-                    <span>{song.duration ? song.duration.toFixed(2) : '3:15'}</span>
+                    <span>3:15</span>
                 </div>
             </div>
             <div className="other-features">
@@ -71,6 +70,7 @@ const BarraReproductor = ({ song }) => {
 };
 
 export default BarraReproductor;
+
 
 
 

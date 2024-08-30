@@ -1,5 +1,5 @@
 // src/components/Navbar/Navbar.jsx
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Navitem from './Navitem/Navitem.jsx';
@@ -8,9 +8,6 @@ import logo from '../../assets/logo.jpeg';
 import CartWidget from '../CartWidget/CartWidget';
 
 const Navbar = () => {
-  const [itemCount,] = useState(0);
-  
-
   return (
     <nav className="navbar">
       <div className='logo'>
@@ -21,7 +18,9 @@ const Navbar = () => {
           return <Navitem key={index} categoria={element} />;
         })}
         <div className='cart-widget'>
-          <CartWidget itemCount={itemCount} />
+          <Link to="/cart">
+            <CartWidget />
+          </Link>
         </div>
       </ul>
     </nav>
@@ -29,3 +28,4 @@ const Navbar = () => {
 }
 
 export default Navbar;
+

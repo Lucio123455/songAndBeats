@@ -5,15 +5,13 @@ import './Navitem.css';
 
 
 const Navitem = ({ categoria }) => {
-  
+
 
   return (
     <>
-      
-        <NavLink to={`/${categoria.toLowerCase()}`} className="nav-link">
-          {categoria}
-        </NavLink>
-      
+      <NavLink to={`/${categoria.toLowerCase()}`} className="nav-link">
+        {categoria}
+      </NavLink>
     </>
   );
 }
